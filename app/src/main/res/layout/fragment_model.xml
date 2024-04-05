@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weather Data"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:padding="16dp"/>
+
+    <EditText
+        android:id="@+id/temperatureEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Temperature"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/humidityEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Humidity"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/precipitationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precipitation"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/dewPointEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="DewPoint"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:textSize="18sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/predict"
+        android:text="Predict Generation"
+        android:layout_marginTop="20dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:id="@+id/resultTextView"/>
+
+</LinearLayout>

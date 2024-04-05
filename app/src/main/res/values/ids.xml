@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="dewPointTextView" type="id" />
+    <item name="precipitationTextView" type="id" />
+    <item name="temperatureEditText" type="id" />
+    <item name="humidityEditText" type="id" />
+    <item name="precipitationEditText" type="id" />
+    <item name="dewPointEditText" type="id" />
+    <item name="predictButton" type="id" />
+    <item name="resultTextView" type="id" />
+    <item name="predict" type="id" />
+</resources>

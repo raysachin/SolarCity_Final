@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "468937467424",
+    "project_id": "solarcity-final",
+    "storage_bucket": "solarcity-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468937467424:android:551ea7bb2c594497bd7e45",
+        "android_client_info": {
+          "package_name": "com.example.solarcity_final"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsQCaKLQtWcBhyTCLfjmPLwBSVlz7wgKc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

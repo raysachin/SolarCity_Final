@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/graph"
+        android:title="Graph"
+        android:icon="@drawable/baseline_auto_graph_24"/>
+
+    <item
+        android:id="@+id/model"
+        android:title="Model"
+        android:icon="@drawable/baseline_model_training_24"/>
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/baseline_home_24"/>
+
+    <item
+        android:id="@+id/notification"
+        android:title="Notification"
+        android:icon="@drawable/baseline_notifications_active_24"/>
+
+    <item
+        android:id="@+id/about"
+        android:title="About"
+        android:icon="@drawable/baseline_question_mark_24"/>
+
+</menu>
