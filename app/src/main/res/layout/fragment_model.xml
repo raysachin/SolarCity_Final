@@ -7,61 +7,151 @@
         android:id="@+id/titleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Weather Data"
-        android:textSize="24sp"
         android:gravity="center"
-        android:padding="16dp"/>
+        android:padding="16dp"
+        android:text="Weather and Panel Data"
+        android:textSize="24sp" />
 
     <EditText
         android:id="@+id/temperatureEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:hint="Temperature"
         android:padding="8dp"
-        android:layout_margin="8dp"
         android:textSize="18sp" />
 
     <EditText
         android:id="@+id/humidityEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:hint="Humidity"
         android:padding="8dp"
-        android:layout_margin="8dp"
         android:textSize="18sp" />
 
     <EditText
         android:id="@+id/precipitationEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:hint="Precipitation"
         android:padding="8dp"
-        android:layout_margin="8dp"
         android:textSize="18sp" />
 
     <EditText
         android:id="@+id/dewPointEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:hint="DewPoint"
         android:padding="8dp"
-        android:layout_margin="8dp"
         android:textSize="18sp" />
 
-    <Button
+    <EditText
+        android:id="@+id/solarPanelCapacityEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Solar Panel Capacity"
+        android:padding="8dp"
+        android:textSize="18sp" />
+
+
+    <EditText
+        android:id="@+id/currentEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Current"
+        android:padding="8dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/voltageEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Voltage"
+        android:padding="8dp"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupPanelClean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Panel Condition:              " />
+
+        <RadioButton
+            android:id="@+id/radioButtonPanelCleanYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clean" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPanelCleanNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dirty" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupCloudCover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Weather condition:          " />
+
+        <RadioButton
+            android:id="@+id/radioButtonCloudCoverYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cloudy" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCloudCoverNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sunny" />
+    </RadioGroup>
+
+    <Button
         android:id="@+id/predict"
-        android:text="Predict Generation"
-        android:layout_marginTop="20dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Predict Generation" />
 
 
     <TextView
+        android:id="@+id/resultTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="50dp"
         android:textAlignment="center"
-        android:id="@+id/resultTextView"/>
+        android:textSize="20dp" />
+
+
+
+
+    <TextView
+        android:id="@+id/alertTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+
 
 </LinearLayout>

@@ -7,12 +7,20 @@
     tools:context=".NotificationFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:text="Notification"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textColor="@color/white"/>-->
+    <ImageView
+        android:id="@+id/notification"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Notification"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:textColor="@color/white"/>
+        android:layout_height="736dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/notifications" />
 
 </FrameLayout>

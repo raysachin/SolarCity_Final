@@ -46,7 +46,9 @@ public class HomeFragment extends Fragment {
         editProfile = view.findViewById(R.id.editButton);
 
         // Read data from Firebase Database
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users");
+
+         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users");
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
