@@ -193,7 +193,7 @@ public class ModelFragment extends Fragment {
                             if (actualGeneration >= predictedGeneration) {
 //                                resultTextView.setText("Predicted Generation: " + predictedGeneration + "Kwh\n" + "Actual Generation: " + actualGeneration + "Kwh\n" + "Panel is Working Well");
                                 resultTextView.setText("Predicted Generation: " + predictedGeneration + "Kwh\n" + "Actual Generation: " + actualGeneration + "Kwh\n");
-                                alertTextView.setText("Panel is Working");
+                                alertTextView.setText("Panel is Working Well");
                             } else {
                                 // Add your condition here using panelCleanValue and cloudCoverValue
                                 // For example:
