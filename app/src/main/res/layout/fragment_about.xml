@@ -1,18 +1,428 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lavender"
-    tools:context=".AboutFragment">
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Header with background color lemon -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="About"
-        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Solar Panel Overview"
+        android:background="@color/lavender"
         android:textSize="30sp"
-        android:textColor="@color/white"/>
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:gravity="center"/>
 
-</FrameLayout>
+    <!-- Solar Panel Efficiency -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Efficiency"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:padding="10dp"/>
+
+    <!-- Efficiency Description -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Solar panel efficiency refers to the amount of sunlight that the panel can convert into usable electricity. Higher efficiency panels can generate more power in the same amount of sunlight."
+        android:textSize="16sp"
+        android:padding="10dp"/>
+
+    <!-- Importance of Solar Panels -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Importance"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:padding="10dp"/>
+
+    <!-- Importance Description -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Solar panels play a crucial role in the transition to renewable energy sources, reducing dependence on fossil fuels and mitigating climate change. They offer a sustainable and environmentally friendly way to generate electricity."
+        android:textSize="16sp"
+        android:padding="10dp"/>
+
+    <!-- Advantages of Solar Panels -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Advantages"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:padding="10dp"/>
+
+    <!-- Advantages Description -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Advantages of solar panels:"
+        android:textSize="16sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Renewable Energy Source"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Reduced Electricity Bills"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Low Maintenance Costs"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Environmentally Friendly"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Energy Independence"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Diverse Applications (Residential, Commercial, Industrial)"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical">-->
+
+<!--    &lt;!&ndash; Header with background color lemon &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Solar Panel Overview"-->
+<!--        android:background="@color/lavender"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="10dp"-->
+<!--        android:gravity="center"/>-->
+
+<!--    &lt;!&ndash; Solar Panel Efficiency &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Efficiency"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="10dp"/>-->
+
+<!--    &lt;!&ndash; Efficiency Description &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Solar panel efficiency refers to the amount of sunlight that the panel can convert into usable electricity. Higher efficiency panels can generate more power in the same amount of sunlight."-->
+<!--        android:textSize="16sp"-->
+<!--        android:padding="10dp"/>-->
+
+<!--    &lt;!&ndash; Importance of Solar Panels &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Importance"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="10dp"/>-->
+
+<!--    &lt;!&ndash; Importance Description &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Solar panels play a crucial role in the transition to renewable energy sources, reducing dependence on fossil fuels and mitigating climate change. They offer a sustainable and environmentally friendly way to generate electricity."-->
+<!--        android:textSize="16sp"-->
+<!--        android:padding="10dp"/>-->
+
+<!--    &lt;!&ndash; Advantages of Solar Panels &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Advantages"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="10dp"/>-->
+
+<!--    &lt;!&ndash; Advantages Description &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Some of the key advantages of solar panels include:-->
+
+
+
+
+
+
+
+<!--        - Renewable Energy Source-->
+
+
+
+
+
+<!--        - Reduced Electricity Bills-->
+
+
+
+
+
+
+
+
+<!--        - Low Maintenance Costs-->
+
+
+
+
+
+
+
+
+<!--        - Environmentally Friendly-->
+
+
+
+
+
+
+
+<!--        - Energy Independence-->
+
+
+
+
+
+
+
+
+
+<!--        - Diverse Applications (Residential, Commercial, Industrial)"-->
+<!--        android:textSize="16sp"-->
+<!--        android:padding="10dp"/>-->
+
+<!--</LinearLayout>-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--    &lt;!&ndash;<?xml version="1.0" encoding="utf-8"?>&ndash;&gt;-->
+<!--&lt;!&ndash;<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:orientation="vertical">&ndash;&gt;-->
+
+<!--&lt;!&ndash;    &lt;!&ndash; Header with background color lemon &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="Solar Panel Efficiency Monitoring"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:background="@color/lavender"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:textSize="30sp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:textStyle="bold"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:padding="10dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:gravity="center"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    &lt;!&ndash; Notification &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="Notification"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:textSize="22sp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:textStyle="bold"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:padding="10dp"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    &lt;!&ndash; Notification 1 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:orientation="vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:padding="10dp">&ndash;&gt;-->
+
+<!--&lt;!&ndash;        &lt;!&ndash; Section 1 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Cloudy Weather"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="20sp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textStyle="bold"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        &lt;!&ndash; Additional lines for Notification 1 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Low Generation Expected"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Efficiency may decrease"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </LinearLayout>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    &lt;!&ndash; Notification 2 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:orientation="vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:padding="10dp">&ndash;&gt;-->
+
+<!--&lt;!&ndash;        &lt;!&ndash; Section 2 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Low Voltage Alert"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="20sp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textStyle="bold"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        &lt;!&ndash; Additional lines for Notification 2 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Voltage below expected value"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Performance may be affected"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </LinearLayout>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    &lt;!&ndash; Notification 3 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:orientation="vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:padding="10dp">&ndash;&gt;-->
+
+<!--&lt;!&ndash;        &lt;!&ndash; Section 3 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Cleaning Required"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="20sp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textStyle="bold"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        &lt;!&ndash; Additional lines for Notification 3 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Dust accumulation detected"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Efficiency may be impacted"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </LinearLayout>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    &lt;!&ndash; Notification 3 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:orientation="vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:padding="10dp">&ndash;&gt;-->
+
+<!--&lt;!&ndash;        &lt;!&ndash; Section 3 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Preventive Maintenance Required"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="20sp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textStyle="bold"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        &lt;!&ndash; Additional lines for Notification 3 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Cells or Modules get damaged"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Efficiency may be impacted"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </LinearLayout>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    &lt;!&ndash; Heading for Monitoring Details &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="Monitoring Details"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:textSize="30sp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:textStyle="bold"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:padding="10dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:gravity="center"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    &lt;!&ndash; Text for Monitoring Details &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="The solar panel efficiency is monitored using machine learning algorithms which analyze various environmental factors such as temperature, humidity, dew point, and precipitation received from IoT devices. Additionally, current and voltage readings from IoT devices are used to calculate actual generation. By comparing actual generation with predictions, alerts are generated to notify about any discrepancies. Data from the IoT devices is continuously analyzed to optimize the efficiency of solar panels. Machine learning algorithms adjust parameters based on real-time data, allowing for better predictions and proactive maintenance."/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+
+
+
+
+<!--&lt;!&ndash;&lt;!&ndash;    &lt;!&ndash;<?xml version="1.0" encoding="utf-8"?>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    xmlns:tools="http://schemas.android.com/tools"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    android:layout_width="match_parent"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    android:layout_height="match_parent"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    android:background="@color/lavender"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    tools:context=".AboutFragment">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <TextView&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        android:layout_height="match_parent"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        android:text="About"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        android:gravity="center"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        android:textSize="30sp"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        android:textColor="@color/white"/>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</FrameLayout>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->

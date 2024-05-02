@@ -28,11 +28,11 @@
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxHeight="205dp"
+        android:maxHeight="200dp"
         android:src="@drawable/humidity"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"
-        android:layout_marginTop="215dp"/>
+        android:layout_marginTop="205dp"/>
 <!--        android:layout_marginBottom="5dp"/>-->
 
     <ImageView
@@ -43,8 +43,7 @@
         android:src="@drawable/dewpoint"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"
-        android:layout_marginTop="397dp"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginTop="375dp"/>
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
@@ -52,8 +51,8 @@
         android:src="@drawable/current"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"
-        android:layout_marginTop="575dp"
-        android:layout_marginBottom="1dp"/>
+        android:layout_marginTop="545dp"
+        android:layout_marginBottom="0dp"/>
 
 
 

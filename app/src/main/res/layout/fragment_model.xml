@@ -12,81 +12,196 @@
         android:text="Weather and Panel Data"
         android:textSize="24sp" />
 
-    <EditText
-        android:id="@+id/temperatureEditText"
+    <!-- Temperature -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:hint="Temperature"
-        android:padding="8dp"
-        android:textSize="18sp" />
-
-    <EditText
-        android:id="@+id/humidityEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:hint="Humidity"
-        android:padding="8dp"
-        android:textSize="18sp" />
-
-    <EditText
-        android:id="@+id/precipitationEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:hint="Precipitation"
-        android:padding="8dp"
-        android:textSize="18sp" />
-
-    <EditText
-        android:id="@+id/dewPointEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:hint="DewPoint"
-        android:padding="8dp"
-        android:textSize="18sp" />
-
-    <EditText
-        android:id="@+id/solarPanelCapacityEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:hint="Solar Panel Capacity"
-        android:padding="8dp"
-        android:textSize="18sp" />
-
-
-    <EditText
-        android:id="@+id/currentEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:hint="Current"
-        android:padding="8dp"
-        android:textSize="18sp" />
-
-    <EditText
-        android:id="@+id/voltageEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:hint="Voltage"
-        android:padding="8dp"
-        android:textSize="18sp" />
-
-    <RadioGroup
-        android:id="@+id/radioGroupPanelClean"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature(°C):   "
+            android:textSize="20sp"
+            android:padding="12dp"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/temperatureEditText"
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter Temperature"
+            android:padding="12dp"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <!-- Humidity -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Relative Humidity: "
+            android:textSize="20sp"
+            android:padding="12dp"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/humidityEditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Panel Condition:              " />
+            android:layout_weight="1"
+            android:hint="Enter Humidity"
+            android:padding="12dp"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <!-- Precipitation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precipitation(inch):"
+            android:textSize="20sp"
+            android:padding="12dp"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/precipitationEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter Precipitation"
+            android:padding="12dp"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <!-- DewPoint -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DewPoint(°C):         "
+            android:textSize="20sp"
+            android:padding="12dp"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/dewPointEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter DewPoint"
+            android:padding="12dp"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <!-- Solar Panel Capacity -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Panel Capacity(W) "
+            android:textSize="20sp"
+            android:padding="12dp"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/solarPanelCapacityEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter Panel Capacity"
+            android:padding="12dp"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <!-- Current -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current(Ω):              "
+            android:textSize="20sp"
+            android:padding="12dp"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/currentEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter Current"
+            android:padding="12dp"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <!-- Voltage -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltage(V):              "
+            android:textSize="20sp"
+            android:padding="12dp"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/voltageEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter Voltage"
+            android:paddingRight="8dp"
+            android:padding="12dp"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <!-- Panel Condition -->
+    <RadioGroup
+        android:id="@+id/radioGroupPanelClean"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Panel Condition:     "
+            android:textSize="20sp"
+            android:padding="12dp"
+            android:gravity="center_vertical"/>
 
         <RadioButton
             android:id="@+id/radioButtonPanelCleanYes"
@@ -99,18 +214,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Dirty" />
+
     </RadioGroup>
 
+    <!-- Cloud Cover -->
     <RadioGroup
         android:id="@+id/radioGroupCloudCover"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Weather condition:          " />
+            android:text="Weather condition: "
+            android:textSize="20sp"
+            android:padding="12dp"
+            android:gravity="center_vertical"/>
 
         <RadioButton
             android:id="@+id/radioButtonCloudCoverYes"
@@ -123,6 +243,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sunny" />
+
     </RadioGroup>
 
     <Button
@@ -139,7 +260,7 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textAlignment="center"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
 
 
@@ -150,8 +271,182 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textAlignment="center"
-        android:textSize="20dp" />
-
+        android:textSize="20sp" />
 
 
 </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical">-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/titleTextView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:padding="16dp"-->
+<!--        android:text="Weather and Panel Data"-->
+<!--        android:textSize="24sp" />-->
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/temperatureEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="8dp"-->
+<!--        android:hint="Temperature"-->
+<!--        android:padding="8dp"-->
+<!--        android:textSize="18sp" />-->
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="8dp">-->
+<!--        <EditText-->
+<!--            android:id="@+id/humidityEditText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:hint="Humidity"-->
+<!--            android:padding="8dp"-->
+<!--            android:textSize="18sp" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/precipitationEditText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:hint="Precipitation"-->
+<!--            android:padding="8dp"-->
+<!--            android:textSize="18sp" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/dewPointEditText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:hint="DewPoint"-->
+<!--            android:padding="8dp"-->
+<!--            android:textSize="18sp" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/solarPanelCapacityEditText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:hint="Solar Panel Capacity"-->
+<!--            android:padding="8dp"-->
+<!--            android:textSize="18sp" />-->
+
+
+<!--        <EditText-->
+<!--            android:id="@+id/currentEditText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:hint="Current"-->
+<!--            android:padding="8dp"-->
+<!--            android:textSize="18sp" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/voltageEditText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:hint="Voltage"-->
+<!--            android:padding="8dp"-->
+<!--            android:textSize="18sp" />-->
+
+<!--    <RadioGroup-->
+<!--        android:id="@+id/radioGroupPanelClean"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="2"-->
+<!--            android:text="Panel Condition:              " />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioButtonPanelCleanYes"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Clean" />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioButtonPanelCleanNo"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Dirty" />-->
+<!--    </RadioGroup>-->
+
+<!--    <RadioGroup-->
+<!--        android:id="@+id/radioGroupCloudCover"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="2"-->
+<!--            android:text="Weather condition:          " />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioButtonCloudCoverYes"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Cloudy" />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioButtonCloudCoverNo"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Sunny" />-->
+<!--    </RadioGroup>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/predict"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="Predict Generation" />-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/resultTextView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text=""-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="20dp" />-->
+
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/alertTextView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text=""-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="20dp" />-->
+
+
+
+<!--</LinearLayout>-->

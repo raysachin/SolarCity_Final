@@ -1,26 +1,350 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lavender"
-    tools:context=".NotificationFragment">
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Header with background color lemon -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notification and Cleaning Records"
+        android:background="@color/lavender"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:gravity="center"/>
+
+    <!-- Notification -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notification"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:padding="10dp"/>
+
+    <!-- Notification 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- Section 1 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cloudy Weather"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <!-- Additional lines for Notification 1 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Low Generation Expected"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Efficiency may decrease"/>
+    </LinearLayout>
+
+
+    <!-- Notification 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- Section 3 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cleaning Required"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <!-- Additional lines for Notification 3 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dust accumulation detected"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Efficiency may be impacted"/>
+    </LinearLayout>
+
+    <!-- Notification 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- Section 3 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preventive Maintenance Required"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <!-- Additional lines for Notification 3 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cells or Modules get damaged"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Efficiency may be impacted"/>
+    </LinearLayout>
+
+    <!-- Heading for Cleaning Record -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cleaning Record"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:gravity="center"/>
+
+    <!-- Text for Cleaning Record -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Last 3 Cleaning Dates:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="10dp"/>
+
+    <!-- Last 3 cleaning dates -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. January 10, 2024"
+        android:textSize="16sp"
+        android:paddingStart="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. March 5, 2024"
+        android:textSize="16sp"
+        android:paddingStart="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3. April 20, 2024"
+        android:textSize="16sp"
+        android:paddingStart="20dp"/>
+
+    <!-- Update Button -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Book New Appointment Button -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book New Appointment"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical">-->
+
+<!--    &lt;!&ndash; Header with background color lemon &ndash;&gt;-->
 <!--    <TextView-->
 <!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:text="Notification"-->
-<!--        android:gravity="center"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Notification and Cleaning Records"-->
+<!--        android:background="@color/lavender"-->
 <!--        android:textSize="30sp"-->
-<!--        android:textColor="@color/white"/>-->
-    <ImageView
-        android:id="@+id/notification"
-        android:layout_width="match_parent"
-        android:layout_height="736dp"
-        android:layout_marginTop="30dp"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/notifications" />
+<!--        android:textStyle="bold"-->
+<!--        android:padding="10dp"-->
+<!--        android:gravity="center"/>-->
 
-</FrameLayout>
+<!--    &lt;!&ndash; Notification &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Notification"-->
+<!--        android:textSize="25sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="10dp"/>-->
+
+<!--    &lt;!&ndash; Notification 1 &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="10dp">-->
+
+<!--        &lt;!&ndash; Section 1 &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Cloudy Weather"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold"/>-->
+
+<!--        &lt;!&ndash; Additional lines for Notification 1 &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Low Generation Expected"/>-->
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Efficiency may decrease"/>-->
+<!--    </LinearLayout>-->
+
+
+<!--    &lt;!&ndash; Notification 3 &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="10dp">-->
+
+<!--        &lt;!&ndash; Section 3 &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Cleaning Required"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold"/>-->
+
+<!--        &lt;!&ndash; Additional lines for Notification 3 &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Dust accumulation detected"/>-->
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Efficiency may be impacted"/>-->
+<!--    </LinearLayout>-->
+
+<!--    &lt;!&ndash; Notification 3 &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="10dp">-->
+
+<!--        &lt;!&ndash; Section 3 &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Preventive Maintenance Required"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold"/>-->
+
+<!--        &lt;!&ndash; Additional lines for Notification 3 &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Cells or Modules get damaged"/>-->
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Efficiency may be impacted"/>-->
+<!--    </LinearLayout>-->
+
+<!--    &lt;!&ndash; Heading for Monitoring Details &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Cleaning Record"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="10dp"-->
+<!--        android:gravity="center"/>-->
+
+<!--    &lt;!&ndash; Text for Monitoring Details &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text=" "/>-->
+
+<!--    &lt;!&ndash; Update Button &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Update"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="20dp"/>-->
+
+<!--    &lt;!&ndash; Book New Appointment Button &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Book New Appointment"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="20dp"/>-->
+
+<!--</LinearLayout>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--&lt;!&ndash;    &lt;!&ndash;<?xml version="1.0" encoding="utf-8"?>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    xmlns:tools="http://schemas.android.com/tools"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    android:layout_width="match_parent"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    android:layout_height="match_parent"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    android:background="@color/lavender"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    tools:context=".NotificationFragment">&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;    <TextView&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        android:layout_height="match_parent"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        android:text="Notification"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        android:gravity="center"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        android:textSize="30sp"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;        android:textColor="@color/white"/>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <ImageView&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        android:id="@+id/notification"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        android:layout_height="736dp"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        android:layout_marginBottom="50dp"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        android:layout_marginTop="0dp"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        android:adjustViewBounds="true"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        android:scaleType="centerCrop"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        android:src="@drawable/notification" />&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;</FrameLayout>&ndash;&gt;&ndash;&gt;-->
