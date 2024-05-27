@@ -26,13 +26,14 @@ public class HomeFragment extends Fragment {
     TextView titleName, titleUsername;
     Button editProfile, logoutButton;
 
+    private String username;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        // Initialize TextViews
         profileName = view.findViewById(R.id.profileName);
         profileEmail = view.findViewById(R.id.profileEmail);
         profileUsername = view.findViewById(R.id.profileUsername);
@@ -41,32 +42,48 @@ public class HomeFragment extends Fragment {
         titleName = view.findViewById(R.id.titleName);
         titleUsername = view.findViewById(R.id.titleUsername);
 
-        // Initialize Buttons
         editProfile = view.findViewById(R.id.editButton);
         logoutButton = view.findViewById(R.id.logoutButton);
 
-        // Read data from Firebase Database
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users");
+        // Get the username from the intent
+        username = getActivity().getIntent().getStringExtra("username");
 
-        databaseReference.addValueEventListener(new ValueEventListener() {
+        if (username != null) {
+            fetchUserData(username);
+        }
+
+        editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // Clear previous data to prevent duplication
-                titleName.setText("");
-                titleUsername.setText("");
-                profileName.setText("");
-                profileEmail.setText("");
-                profileUsername.setText("");
-                profilePassword.setText("");
+            public void onClick(View view) {
+                passUserData();
+            }
+        });
 
-                // Iterate through each user data
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(getContext(), LoginActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
+
+        return view;
+    }
+
+    private void fetchUserData(String username) {
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users").child(username);
+
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+                if (snapshot.exists()) {
                     String name = snapshot.child("name").getValue(String.class);
                     String email = snapshot.child("email").getValue(String.class);
                     String username = snapshot.child("username").getValue(String.class);
                     String password = snapshot.child("password").getValue(String.class);
 
-                    // Update UI with the latest data
                     titleName.setText(name);
                     titleUsername.setText(username);
                     profileName.setText(name);
@@ -78,51 +95,23 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onCancelled(DatabaseError error) {
-                // Failed to read value
                 Log.w("TAG", "Failed to read value.", error.toException());
             }
         });
-
-        // Button click listener to pass user data to EditProfileActivity
-        editProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                passUserData();
-            }
-        });
-
-        // Button click listener to handle logout
-        logoutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Sign out the user
-                FirebaseAuth.getInstance().signOut();
-
-                // Navigate back to the login page
-                Intent intent = new Intent(getContext(), LoginActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-            }
-        });
-
-        return view;
     }
 
     private void passUserData() {
-        String userUsername = profileUsername.getText().toString().trim();
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
-        Query checkUserDatabase = reference.orderByChild("username").equalTo(userUsername);
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users").child(username);
 
-        checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+        reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    String nameFromDB = snapshot.child(userUsername).child("name").getValue(String.class);
-                    String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
-                    String usernameFromDB = snapshot.child(userUsername).child("username").getValue(String.class);
-                    String passwordFromDB = snapshot.child(userUsername).child("password").getValue(String.class);
+                    String nameFromDB = snapshot.child("name").getValue(String.class);
+                    String emailFromDB = snapshot.child("email").getValue(String.class);
+                    String usernameFromDB = snapshot.child("username").getValue(String.class);
+                    String passwordFromDB = snapshot.child("password").getValue(String.class);
 
-                    // Start EditProfileActivity and pass user data
                     Intent intent = new Intent(getContext(), EditProfileActivity.class);
                     intent.putExtra("name", nameFromDB);
                     intent.putExtra("email", emailFromDB);
@@ -134,7 +123,7 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                // Handle onCancelled event
+                Log.w("TAG", "Failed to read value.", error.toException());
             }
         });
     }
@@ -149,6 +138,161 @@ public class HomeFragment extends Fragment {
 
 
 
+
+
+// code till 22-05-2024
+
+//package com.example.solarcity_final;
+//
+//import android.content.Intent;
+//import android.os.Bundle;
+//import android.util.Log;
+//import android.view.LayoutInflater;
+//import android.view.View;
+//import android.view.ViewGroup;
+//import android.widget.Button;
+//import android.widget.TextView;
+//
+//import androidx.annotation.NonNull;
+//import androidx.fragment.app.Fragment;
+//
+//import com.google.firebase.auth.FirebaseAuth;
+//import com.google.firebase.database.DataSnapshot;
+//import com.google.firebase.database.DatabaseError;
+//import com.google.firebase.database.DatabaseReference;
+//import com.google.firebase.database.FirebaseDatabase;
+//import com.google.firebase.database.Query;
+//import com.google.firebase.database.ValueEventListener;
+//
+//public class HomeFragment extends Fragment {
+//
+//    TextView profileName, profileEmail, profileUsername, profilePassword;
+//    TextView titleName, titleUsername;
+//    Button editProfile, logoutButton;
+//
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+//                             Bundle savedInstanceState) {
+//
+//        View view = inflater.inflate(R.layout.fragment_home, container, false);
+//
+//        // Initialize TextViews
+//        profileName = view.findViewById(R.id.profileName);
+//        profileEmail = view.findViewById(R.id.profileEmail);
+//        profileUsername = view.findViewById(R.id.profileUsername);
+//        profilePassword = view.findViewById(R.id.profilePassword);
+//        profilePassword.setVisibility(View.GONE);
+//        titleName = view.findViewById(R.id.titleName);
+//        titleUsername = view.findViewById(R.id.titleUsername);
+//
+//        // Initialize Buttons
+//        editProfile = view.findViewById(R.id.editButton);
+//        logoutButton = view.findViewById(R.id.logoutButton);
+//
+//        // Read data from Firebase Database
+//        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users");
+//
+//        databaseReference.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                // Clear previous data to prevent duplication
+//                titleName.setText("");
+//                titleUsername.setText("");
+//                profileName.setText("");
+//                profileEmail.setText("");
+//                profileUsername.setText("");
+//                profilePassword.setText("");
+//
+//                // Iterate through each user data
+//                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+//                    String name = snapshot.child("name").getValue(String.class);
+//                    String email = snapshot.child("email").getValue(String.class);
+//                    String username = snapshot.child("username").getValue(String.class);
+//                    String password = snapshot.child("password").getValue(String.class);
+//
+//                    // Update UI with the latest data
+//                    titleName.setText(name);
+//                    titleUsername.setText(username);
+//                    profileName.setText(name);
+//                    profileEmail.setText(email);
+//                    profileUsername.setText(username);
+//                    profilePassword.setText(password);
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError error) {
+//                // Failed to read value
+//                Log.w("TAG", "Failed to read value.", error.toException());
+//            }
+//        });
+//
+//        // Button click listener to pass user data to EditProfileActivity
+//        editProfile.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                passUserData();
+//            }
+//        });
+//
+//        // Button click listener to handle logout
+//        logoutButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                // Sign out the user
+//                FirebaseAuth.getInstance().signOut();
+//
+//                // Navigate back to the login page
+//                Intent intent = new Intent(getContext(), LoginActivity.class);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        return view;
+//    }
+//
+//    private void passUserData() {
+//        String userUsername = profileUsername.getText().toString().trim();
+//        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+//        Query checkUserDatabase = reference.orderByChild("username").equalTo(userUsername);
+//
+//        checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                if (snapshot.exists()) {
+//                    String nameFromDB = snapshot.child(userUsername).child("name").getValue(String.class);
+//                    String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
+//                    String usernameFromDB = snapshot.child(userUsername).child("username").getValue(String.class);
+//                    String passwordFromDB = snapshot.child(userUsername).child("password").getValue(String.class);
+//
+//                    // Start EditProfileActivity and pass user data
+//                    Intent intent = new Intent(getContext(), EditProfileActivity.class);
+//                    intent.putExtra("name", nameFromDB);
+//                    intent.putExtra("email", emailFromDB);
+//                    intent.putExtra("username", usernameFromDB);
+//                    intent.putExtra("password", passwordFromDB);
+//                    startActivity(intent);
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//                // Handle onCancelled event
+//            }
+//        });
+//    }
+//}
+
+
+
+
+
+
+
+
+
+// Previous code
 
 //package com.example.solarcity_final;
 //
